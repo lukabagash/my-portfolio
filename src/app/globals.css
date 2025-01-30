@@ -2,20 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Example of a custom utility layer for more specific animations/effects */
+@layer utilities {
+  /* Example: a text glow effect */
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
