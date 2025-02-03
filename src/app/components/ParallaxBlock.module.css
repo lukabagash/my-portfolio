@@ -1,0 +1,48 @@
+/* components/ParallaxBlock.module.css */
+
+/* Adjusted container style so that multiple blocks can line up horizontally */
+.parallaxContainer {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    margin: 1rem;
+    cursor: pointer;  /* Indicates clickable */
+}
+  
+/* Base element which will be rotated on mouse movement */
+.parallaxBase {
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+}
+  
+/* Shared style for each layer */
+.parallaxBase div {
+    /* Removed background and opacity to show only text */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1.2rem;
+    color: #181818;
+}
+  
+/* Each layer gets a different translateZ value */
+.layer1 {
+    transform: translateZ(0px);
+}
+  
+.layer2 {
+    transform: translateZ(25px);
+}
+  
+.layer3 {
+    transform: translateZ(80px);
+}

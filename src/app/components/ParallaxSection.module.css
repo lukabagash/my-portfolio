@@ -1,0 +1,9 @@
+/* components/ParallaxSection.module.css */
+.parallaxSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 4rem 0; /* adjust the top/bottom margin as needed */
+  }
+  

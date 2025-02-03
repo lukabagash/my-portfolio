@@ -1,42 +1,37 @@
-// app/page.tsx
+import './main.css'
+import ParallaxSection from '@/app/components/ParallaxSection';
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center mt-10 space-y-8">
-      {/* Hero Section */}
-      <div className="text-center">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-glow leading-tight">
-          Hello, I’m <span className="text-red-300">Your Name</span>
-        </h1>
-        <p className="mt-4 text-xl md:text-2xl max-w-2xl mx-auto">
-          A Web Developer & Designer who loves crafting unique digital
-          experiences.
-        </p>
-      </div>
-
-      {/* CTA Buttons */}
-      <div className="flex space-x-4">
-        <a
-          href="/projects"
-          className="bg-red-500 hover:bg-red-600 px-6 py-3 rounded-full text-white font-semibold"
-        >
-          Explore My Work
-        </a>
-        <a
-          href="/contact"
-          className="bg-transparent border border-white hover:bg-white hover:text-black px-6 py-3 rounded-full font-semibold"
-        >
-          Get in Touch
-        </a>
-      </div>
-
-      {/* Cool Visual / Image (optional) */}
-      <div className="mt-12">
-        {/* Replace this with your own image or illustration */}
-        <div className="w-64 h-64 rounded-full bg-white/20 flex items-center justify-center">
-          <span className="text-4xl">🪄</span>
+    <>
+      <main className="main">
+        <div className="mainDiv">
+          <h1 className="bigTitle">
+            <span className="welcomeText">Welcome</span> to my blog
+          </h1>
+          <div className="research">Scroll down to discover</div>
+          <div className="line" />
         </div>
-      </div>
-    </section>
-  )
+      </main>
+
+      {/* Parallax Section appears further down the page */}
+      <ParallaxSection />
+
+      {/* Target Sections */}
+      <section id="projects" className="section">
+        <h2>Projects</h2>
+        <p>This is the Projects section. Here you can showcase your projects.</p>
+      </section>
+
+      <section id="about-me" className="section">
+        <h2>About Me</h2>
+        <p>This is the About Me section. Add your biography, skills, and interests here.</p>
+      </section>
+
+      <section id="contact-me" className="section">
+        <h2>Contact Me</h2>
+        <p>This is the Contact Me section. Provide your contact details or a contact form here.</p>
+      </section>
+    </>
+  );
 }
