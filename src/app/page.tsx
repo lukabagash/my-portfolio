@@ -1,5 +1,7 @@
-import './main.css'
-import ParallaxSection from '@/app/components/ParallaxSection';
+// app/page.tsx
+import "./main.css";
+import ParallaxSection from "@/app/components/ParallaxSection";
+import { WavyBackground } from "@/app/components/ui/wavy-background";
 
 export default function Home() {
   return (
@@ -16,21 +18,40 @@ export default function Home() {
 
       {/* Parallax Section appears further down the page */}
       <ParallaxSection />
+      <section id="projects" className="section relative z-10">
 
-      {/* Target Sections */}
-      <section id="projects" className="section">
-        <h2>Projects</h2>
-        <p>This is the Projects section. Here you can showcase your projects.</p>
+      {/* Projects Section with Wavy Background */}
+      <WavyBackground
+        // Override the default full-screen container class
+        containerClassName="relative"
+        // Set a background fill (adjust as needed)
+        backgroundFill="#ffffff"
+        // Adjust wave properties if desired
+        waveOpacity={0.3}
+        waveWidth={50}
+      >
+          <h2>Projects</h2>
+          <p>
+            This is the Projects section. Here you can showcase your projects.
+          </p>
+      </WavyBackground>
       </section>
+
 
       <section id="about-me" className="section">
         <h2>About Me</h2>
-        <p>This is the About Me section. Add your biography, skills, and interests here.</p>
+        <p>
+          This is the About Me section. Add your biography, skills, and interests
+          here.
+        </p>
       </section>
 
       <section id="contact-me" className="section">
         <h2>Contact Me</h2>
-        <p>This is the Contact Me section. Provide your contact details or a contact form here.</p>
+        <p>
+          This is the Contact Me section. Provide your contact details or a
+          contact form here.
+        </p>
       </section>
     </>
   );

@@ -9,7 +9,7 @@ interface ParallaxBlockProps {
   label: string;
 }
 
-const ParallaxBlock: React.FC<ParallaxBlockProps> = ({ radiusVal = -10, label }) => {
+const ParallaxBlock: React.FC<ParallaxBlockProps> = ({ radiusVal = -20, label }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const baseRef = useRef<HTMLDivElement | null>(null);
 
@@ -20,7 +20,7 @@ const ParallaxBlock: React.FC<ParallaxBlockProps> = ({ radiusVal = -10, label })
 
     const handleMouseMove = (event: MouseEvent) => {
       const cx = Math.ceil(window.innerWidth / 2);
-      const cy = Math.ceil(window.innerHeight / 2);
+      const cy = Math.ceil(window.innerHeight);
       const dx = event.pageX - cx;
       const dy = event.pageY - cy;
       const tiltx = dy / cy;
